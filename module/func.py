@@ -27,9 +27,9 @@ def sendTWder(event, mtext):
     try:
 #        money = '美元'
         money = mtext
-	rate_date = twder.now(currencies[money])[0]
-	show = rate_date + '\n'
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=show))
+#	rate_date = twder.now(currencies[money])[0]
+#	show = rate_date + '\n'
+#        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=show))
         if not money == '':  #匯率類幣別存在
             if money in keys:
                 rate3 = float(twder.now(currencies[money])[3])  #由匯率套件取得匯率
