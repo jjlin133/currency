@@ -43,17 +43,19 @@ def sendTWder(event, mtext):
     except:
        text = '無法了解你的意思，請重新輸入！'
        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
+        
+#北歐福利網頁：https://kknews.cc/zh-tw/world/3q2r8ng.html
 
+#銘傳網網頁：http://172.104.79.148/mcu/?act=shopping&cmd=main&pg_id=2020093000006
+
+#零存整付試算網 https://currency2021.herokuapp.com/fv2
+
+#預約訂房表單網頁(lai帳號) https://hotelformliff.herokuapp.com/index_form.html
+        
 def neuWeb(event):  #網頁連結
     try:
         text1 ='''
-北歐福利網頁：https://kknews.cc/zh-tw/world/3q2r8ng.html
-
 銘傳網網頁：http://172.104.79.148/mcu/?act=shopping&cmd=main&pg_id=2020093000006
-
-零存整付試算網 https://currency2021.herokuapp.com/fv2
-
-預約訂房表單網頁(lai帳號) https://hotelformliff.herokuapp.com/index_form.html
 
 (LIFF)北歐福利網頁 https://liff.line.me/1654001451-WD5802xL
 
