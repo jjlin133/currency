@@ -58,22 +58,22 @@ def sendTWder(event, mtext):
 #預約訂房表單網頁(lai帳號) https://hotelformliff.herokuapp.com/index_form.html
 #(LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
 
+#(LIFF)北歐福利網頁 https://liff.line.me/1654001451-WD5802xL
+#(LIFF)零存整付試算   https://liff.line.me/1654001451-0k9NPkVJ
+#(LIFF)預約訂房TW行動支付    https://liff.line.me/1654001451-0YAYOpyD
+#(LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
+
+ 
 def neuWeb(event):  #網頁連結
     try:
         text1 ='''
-銘傳網網頁：http://172.104.79.148/mcu/?act=shopping&cmd=main&pg_id=2020093000006
-
 (LIFF)北歐福利網頁 https://liff.line.me/1654001451-WD5802xL
-
 (LIFF)零存整付試算   https://liff.line.me/1654001451-0k9NPkVJ
-
 (LIFF)預約訂房TW行動支付    https://liff.line.me/1654001451-0YAYOpyD
-
 (LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
-
                '''
         message = TextSendMessage(
-            text = text1
+            text = 'https://liff.line.me/1654001451-0YAYOpyD'
         )
         line_bot_api.reply_message(event.reply_token,message)
     except:
