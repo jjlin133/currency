@@ -51,7 +51,14 @@ def neuWeb(event):  #網頁連結
 
 銘傳網網頁：http://172.104.79.148/mcu/?act=shopping&cmd=main&pg_id=2020093000006
 
-零存整付試算網：https://currency2021.herokuapp.com/fv2
+零存整付試算網 https://currency2021.herokuapp.com/fv2
+
+預約訂房表單網頁(lai帳號) https://hotelformliff.herokuapp.com/index_form.html
+
+(LIFF)零存整付試算   https://liff.line.me/1654001451-0k9NPkVJ
+
+(LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
+
 
                '''
         message = TextSendMessage(
