@@ -35,9 +35,11 @@ def callback(request):
         for event in events:
             if isinstance(event, MessageEvent):
                 mtext = event.message.text
-                if mtext=='@使用說明':  #顯示使用說明
+                if mtext=='@查詢說明':  #顯示使用說明
                     func.sendUse(event)
                 elif mtext=='@北歐貿易':  #顯示使用說明
+                    func.neuWeb(event)
+                elif mtext=='@理財試算':  #顯示使用說明
                     func.neuWeb(event)
 
                 else:  #一般性輸入
