@@ -43,7 +43,8 @@ def sendTWder(event, mtext):
     except:
        text = '無法了解你的意思，請重新輸入！'
        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
-        
+
+################## LIFF　測試網頁　（皆ok,2021.0328） ###################################### 
 #北歐福利網頁：https://kknews.cc/zh-tw/world/3q2r8ng.html
 #(LIFF)北歐福利網頁 https://liff.line.me/1654001451-WD5802xL
 
@@ -62,8 +63,8 @@ def sendTWder(event, mtext):
 #(LIFF)零存整付試算   https://liff.line.me/1654001451-0k9NPkVJ
 #(LIFF)預約訂房TW行動支付    https://liff.line.me/1654001451-0YAYOpyD
 #(LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
+#################################################################################### 
 
- 
 def neuWeb(event):  #網頁連結
     try:
         text1 ='''
