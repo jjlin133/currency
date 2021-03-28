@@ -72,6 +72,8 @@ def neuWeb(event):  #網頁連結
 銘傳網網頁：http://172.104.79.148/mcu/?act=shopping&cmd=main&pg_id=2020093000006
 
 零存整付試算   https://currency2021.herokuapp.com/fv
+
+歡迎網＆時間　https://currency2021.herokuapp.com/hello4/jenjen/
               '''
         message = TextSendMessage(
             text = text1
