@@ -67,12 +67,11 @@ def sendTWder(event, mtext):
 def neuWeb(event):  #網頁連結
     try:
         text1 ='''
+北歐福利網頁：https://kknews.cc/zh-tw/world/3q2r8ng.html
 銘傳網網頁：http://172.104.79.148/mcu/?act=shopping&cmd=main&pg_id=2020093000006
-(LIFF)北歐福利網頁 https://liff.line.me/1654001451-WD5802xL
-(LIFF)零存整付試算   https://liff.line.me/1654001451-0k9NPkVJ
-(LIFF)預約訂房TW行動支付    https://liff.line.me/1654001451-0YAYOpyD
-(LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
-               '''
+
+零存整付試算   https://currency2021.herokuapp.com/fv
+              '''
         message = TextSendMessage(
             text = text1
 #            text = 'https://liff.line.me/1654001451-0YAYOpyD'
