@@ -45,13 +45,19 @@ def sendTWder(event, mtext):
        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
         
 #北歐福利網頁：https://kknews.cc/zh-tw/world/3q2r8ng.html
+#(LIFF)北歐福利網頁 https://liff.line.me/1654001451-WD5802xL
 
 #銘傳網網頁：http://172.104.79.148/mcu/?act=shopping&cmd=main&pg_id=2020093000006
 
 #零存整付試算網 https://currency2021.herokuapp.com/fv2
+#(LIFF)零存整付試算   https://liff.line.me/1654001451-0k9NPkVJ
+
+#預約訂房TW行動支付 https://finliff.herokuapp.com/index_form.html
+#(LIFF)預約訂房TW行動支付   https://liff.line.me/1654001451-0YAYOpyD
 
 #預約訂房表單網頁(lai帳號) https://hotelformliff.herokuapp.com/index_form.html
-        
+#(LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
+
 def neuWeb(event):  #網頁連結
     try:
         text1 ='''
@@ -60,6 +66,8 @@ def neuWeb(event):  #網頁連結
 (LIFF)北歐福利網頁 https://liff.line.me/1654001451-WD5802xL
 
 (LIFF)零存整付試算   https://liff.line.me/1654001451-0k9NPkVJ
+
+(LIFF)預約訂房TW行動支付    https://liff.line.me/1654001451-0YAYOpyD
 
 (LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
 
