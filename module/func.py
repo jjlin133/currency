@@ -74,7 +74,8 @@ def neuWeb(event):  #網頁連結
 (LIFF_連結至 lai帳號)預約訂房表單   https://liff.line.me/1654001451-zqZ8ewpJ
                '''
         message = TextSendMessage(
-            text = 'https://liff.line.me/1654001451-0YAYOpyD'
+            text = text1
+#            text = 'https://liff.line.me/1654001451-0YAYOpyD'
         )
         line_bot_api.reply_message(event.reply_token,message)
     except:
