@@ -28,10 +28,14 @@ def sendTWder(event, mtext):
         money = mtext       
         if not money == '':  #匯率類幣別存在
             if money in keys:
-                rate_date = twder.now(currencies[money])[0]  
+                rate_date = twder.now(currencies[money])[0]
+                cashBuy = float(twder.now(currencies[money])[1])  #由匯率套件取得匯率
+                cashSell = float(twder.now(currencies[money])[2])  #由匯率套件取得匯率
                 checkBuy = float(twder.now(currencies[money])[3])  #由匯率套件取得匯率
                 checkSell = float(twder.now(currencies[money])[4])  #由匯率套件取得匯率
-                message =  rate_date + '\n' + money + '匯率_(台灣銀行端)'+ '\n 即期買入 : ' + str(checkBuy)
+                message =  rate_date + '\n' + money + '匯率_(台灣銀行端)'+ '\n 現金買入 : ' + str(cashBuy)
+                 message = message + '\n 現金賣出 : ' + str(cashSell)
+                message = message + '\n 即期買入 : ' + str(checkBuy)
                 message = message + '\n 即期賣出 : ' + str(checkSell)
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
             else:
