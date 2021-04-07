@@ -30,7 +30,7 @@ def sendTWder(event, mtext):
             if money in keys:
                 rate_date = twder.now(currencies[money])[0]  
                 rate3 = float(twder.now(currencies[money])[3])  #由匯率套件取得匯率
-                message =  rate_date + '\n' + money + '_即期買入匯率 \n ' + str(rate3)+ '_(台灣銀行端) '
+                message =  rate_date + '\n' + money + '__(台灣銀行端)'+ '\n 即期買入匯率 \n ' + str(rate3)
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
             else:
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))
