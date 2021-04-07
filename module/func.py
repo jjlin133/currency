@@ -25,7 +25,7 @@ def sendUse(event):  #使用說明
 #函數 sendLUIS 是課本Ch09 範例 >>> 可以修正為自己的函數 sendTWder
 def sendTWder(event, mtext):  
     try:
-        if money in keys:  #匯率類幣別存在
+        if mtext in keys:  #匯率類幣別存在
             rate_date = twder.now(currencies[mtext])[0]
             rate3 = float(twder.now(currencies[mtext])[3])
             message =  rate_date + '\n' + money + '_即期買入匯率 \n ' + str(rate3)+ '_(台灣銀行端) '
