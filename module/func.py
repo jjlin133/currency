@@ -22,8 +22,7 @@ def sendUse(event):  #使用說明
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
-#函數 sendLUIS 是課本Ch09 範例 >>> 可以修正為自己的函數 sendTWder
-def sendTWder(event, mtext):  
+def sendTWder_orig(event, mtext):  
     try:
         money = mtext       
         if not money == '':  #匯率類幣別存在
@@ -40,6 +39,35 @@ def sendTWder(event, mtext):
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
             else:
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))
+        else:  #其他未知輸入
+            text =' 無此幣別匯率資料！，請重新輸入！'
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))            
+    except:
+        text = '無法了解你的意思，請重新輸入！'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
+        
+        
+#函數 sendLUIS 是課本Ch09 範例 >>> 可以修正為自己的函數 sendTWder
+def sendTWder(event, mtext):  
+    try:
+        money = mtext       
+        if not money == '':  #匯率類幣別存在
+            if money in keys:
+                rate_date = twder.now(currencies[money])[0]
+                cashBuy = float(twder.now(currencies[money])[1])  #由匯率套件取得匯率
+                cashSell = float(twder.now(currencies[money])[2])  #由匯率套件取得匯率
+                checkBuy = float(twder.now(currencies[money])[3])  #由匯率套件取得匯率
+                checkSell = float(twder.now(currencies[money])[4])  #由匯率套件取得匯率
+                message =  rate_date + '\n' + money + '匯率_(台灣銀行端)'+ '\n 現金買入 : ' + str(cashBuy)
+                message = message + '\n 現金賣出 : ' + str(cashSell)
+                message = message + '\n 即期買入 : ' + str(checkBuy)
+                message = message + '\n 即期賣出 : ' + str(checkSell)
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
+            elif mtext == '@使用說明':
+                func.sendUse(event)
+            else:
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))
+                
         else:  #其他未知輸入
             text =' 無此幣別匯率資料！，請重新輸入！'
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))            
