@@ -32,15 +32,14 @@ def sendTWder(event, mtext):
             if money in keys:
                 rate_date = twder.now(currencies[money])[0]
                 cashBuy = float(twder.now(currencies[mtext])[1])  #現金買入_匯率
-	              cashSell = float(twder.now(currencies[mtext])[2])  #現金賣出_匯率
-	              checkBuy = float(twder.now(currencies[mtext])[3])  #即期買入_匯率
-	              checkSell = float(twder.now(currencies[mtext])[4])  #即期賣出_匯率
-	              message = rate_date + '\n' + mtext + '_台灣銀行端匯率'
-	              message = message + '\n 現金買入 : ' + str(cashBuy)
-	              message = message + '\n 現金賣出 : ' + str(cashSell)
-	              message = message + '\n 即期買入 : ' + str(checkBuy)
-	              message = message + '\n 即期賣出 : ' + str(checkSell)				
-   
+	        cashSell = float(twder.now(currencies[mtext])[2])  #現金賣出_匯率
+	        checkBuy = float(twder.now(currencies[mtext])[3])  #即期買入_匯率
+	        checkSell = float(twder.now(currencies[mtext])[4])  #即期賣出_匯率
+	        message = rate_date + '\n' + mtext + '_台灣銀行端匯率'
+	        message = message + '\n 現金買入 : ' + str(cashBuy)
+	        message = message + '\n 現金賣出 : ' + str(cashSell)
+	        message = message + '\n 即期買入 : ' + str(checkBuy)
+	        message = message + '\n 即期賣出 : ' + str(checkSell)   
 #                rate3 = float(twder.now(currencies[money])[3])  #由匯率套件取得匯率
 #                message =  rate_date + '\n' + money + '_即期買入匯率 \n ' + str(rate3)+ '_(台灣銀行端) '
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
