@@ -22,7 +22,7 @@ def sendUse(event):  #使用說明
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
 
-def sendTWder(event, mtext):  
+def sendTWder_orig(event, mtext):  
     try:
         money = mtext       
         if not money == '':  #匯率類幣別存在
@@ -48,12 +48,12 @@ def sendTWder(event, mtext):
         
         
 #函數 sendLUIS 是課本Ch09 範例 >>> 可以修正為自己的函數 sendTWder
-def sendTWder_orig(event, mtext):  
+def sendTWder(event, mtext):  
     try:
         money = mtext       
         if not money == '':  #匯率類幣別存在
             if mtext == '@使用說明':
-                func.sendUse(event)  
+                sendUse(event)  
             elif money in keys:
                 rate_date = twder.now(currencies[money])[0]
                 cashBuy = float(twder.now(currencies[money])[1])  #由匯率套件取得匯率
