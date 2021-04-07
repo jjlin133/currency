@@ -25,13 +25,18 @@ def sendUse(event):  #使用說明
 #函數 sendLUIS 是課本Ch09 範例 >>> 可以修正為自己的函數 sendTWder
 def sendTWder(event, mtext):  
     try:
-        if mtext in keys:  #匯率類幣別存在
-            rate_date = twder.now(currencies[mtext])[0]
-            rate3 = float(twder.now(currencies[mtext])[3])
-            message =  rate_date + '\n' + money + '_即期買入匯率 \n ' + str(rate3)+ '_(台灣銀行端) '
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
-        else:
-            line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))          
+        money = mtext       
+        if not money == '':  #匯率類幣別存在
+            if money in keys:
+                rate_date = twder.now(currencies[money])[0]  
+                rate3 = float(twder.now(currencies[money])[3])  #由匯率套件取得匯率
+                message =  rate_date + '\n' + money + '_即期買入匯率 \n ' + str(rate3)+ '_(台灣銀行端) '
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
+            else:
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))
+        else:  #其他未知輸入
+            text =' 無此幣別匯率資料！，請重新輸入！'
+            line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))            
     except:
        text = '無法了解你的意思，請重新輸入！'
        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
