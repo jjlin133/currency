@@ -30,7 +30,9 @@ def sendTWder(event, mtext):
             if money in keys:
                 rate_date = twder.now(currencies[money])[0]  
                 checkBuy = float(twder.now(currencies[money])[3])  #由匯率套件取得匯率
-                message =  rate_date + '\n' + money + '匯率_(台灣銀行端)'+ '\n 即期買入匯率 : ' + str(checkBuy)
+                checkSell = float(twder.now(currencies[money])[4])  #由匯率套件取得匯率
+                message =  rate_date + '\n' + money + '匯率_(台灣銀行端)'+ '\n 即期買入 : ' + str(checkBuy)
+                message = message + '\n 即期賣出 : ' + str(checkSell)
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
             else:
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))
