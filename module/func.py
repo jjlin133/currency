@@ -38,8 +38,8 @@ def sendTWder(event, mtext):
             text =' 無此幣別匯率資料！，請重新輸入！'
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))            
     except:
-       text = '無法了解你的意思，請重新輸入！'
-       line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
+        text = '無法了解你的意思，請重新輸入！'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
 
 ################## LIFF　測試網頁　（皆ok,2021.0328） ###################################### 
 #北歐福利網頁：https://kknews.cc/zh-tw/world/3q2r8ng.html
