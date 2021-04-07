@@ -52,7 +52,9 @@ def sendTWder(event, mtext):
     try:
         money = mtext       
         if not money == '':  #匯率類幣別存在
-            if money in keys:
+            if mtext == '@使用說明':
+                func.sendUse(event)  
+            elif money in keys:
                 rate_date = twder.now(currencies[money])[0]
                 cashBuy = float(twder.now(currencies[money])[1])  #由匯率套件取得匯率
                 cashSell = float(twder.now(currencies[money])[2])  #由匯率套件取得匯率
@@ -63,13 +65,10 @@ def sendTWder(event, mtext):
                 message = message + '\n 即期買入 : ' + str(checkBuy)
                 message = message + '\n 即期賣出 : ' + str(checkSell)
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
-            elif mtext == '@使用說明':
-                func.sendUse(event)
             else:
-                line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))
-                
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))                
         else:  #其他未知輸入
-            text =' 無此幣別匯率資料！，請重新輸入！'
+            text =' 其他未知資訊！，請重新輸入！'
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))            
     except:
         text = '無法了解你的意思，請重新輸入！'
