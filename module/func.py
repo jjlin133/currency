@@ -26,8 +26,8 @@ def sendUse(event):  #使用說明
 def sendTWder(event, mtext):  
     try:
         money = mtext       
-        if not money == '':  #匯率類幣別存在
-            if money in keys:
+        if not mtext == '':  #匯率類幣別存在
+            if mtext in keys:
                 rate_date = twder.now(currencies[mtext])[0]
                 cashBuy = float(twder.now(currencies[mtext])[1])  #現金買入_匯率
                 cashSell = float(twder.now(currencies[mtext])[2])  #現金賣出_匯率
