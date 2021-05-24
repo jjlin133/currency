@@ -41,7 +41,7 @@ def callback(request):
                     func.neuWeb(event)
                 elif mtext=='@理財試算':  # --- LINE Bot 專案 currency
                     func.neuWeb(event)
-                elif mtext=='@程式語言選單':  #多項選單
+                elif mtext=='@程式語言選單':  #LINE Bot 專案 currency_Demo --- 多項選單
                     func.sendQuickreply(event)
 
                 else:  #一般性輸入
