@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# LINE Bot 專案 (currency) -- 圖文表單 (2*1) 外匯查詢 & 北歐貿易網頁連結 -- 2021.0410
 SECRET_KEY = 'Uaa63a3f5feff2725536db7d81f09c929'
 LINE_CHANNEL_ACCESS_TOKEN = '17URPk56smrMsWCp7e912oZd81oLt9V54/XzaznpEi/zO5tPpacSIBG9LHVaczBdkg3yr082JtRH9P/jCVwQ1zjONXCtKBAXdZJPcwq7cstYc0fyACaO/0BI2qxkiaQi47L5anTlYck36ie8KK/kXAdB04t89/1O/w1cDnyilFU='
 LINE_CHANNEL_SECRET = '7256e5990761221dad0a1047cb126934'
