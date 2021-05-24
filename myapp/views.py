@@ -35,12 +35,14 @@ def callback(request):
         for event in events:
             if isinstance(event, MessageEvent):
                 mtext = event.message.text
-                if mtext=='@查詢說明':  #顯示使用說明
+                if mtext=='@匯率查詢說明':  #LINE Bot 專案 currency_Demo ### mtext=='@查詢說明' --- LINE Bot 專案 currency
                     func.sendUse(event)
-                elif mtext=='@北歐貿易':  #顯示使用說明
+                elif mtext=='@北歐貿易':  # --- LINE Bot 專案 currency
                     func.neuWeb(event)
-                elif mtext=='@理財試算':  #顯示使用說明
+                elif mtext=='@理財試算':  # --- LINE Bot 專案 currency
                     func.neuWeb(event)
+                elif mtext=='@程式語言選單':  #多項選單
+                    func.sendQuickreply(event)
 
                 else:  #一般性輸入
                     func.sendTWder(event, mtext)
