@@ -125,3 +125,29 @@ def finWeb(event):  #網頁連結
         line_bot_api.reply_message(event.reply_token,message)
     except:
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
+        
+        
+def sendQuickreply(event):  #快速選單
+    try:
+        message = TextSendMessage(
+            text='請選擇最喜歡的程式語言',
+            quick_reply=QuickReply(
+                items=[
+                    QuickReplyButton(
+                        action=MessageAction(label="Python", text="Python_Django專案_可建構網頁")
+                    ),
+                    QuickReplyButton(
+                        action=MessageAction(label="R", text="R語言_適合進行預測分析與建立預測模型 & RShiny_可建構互動式網頁 ")
+                    ),
+                    QuickReplyButton(
+                        action=MessageAction(label="SAS", text="SAS_專業的統計分析軟體")
+                    ),
+                    QuickReplyButton(
+                        action=MessageAction(label="SPSS", text="SPSS_社會科學領域的統計分析軟體")
+                    ),
+                ]
+            )
+        )
+        line_bot_api.reply_message(event.reply_token,message)
+    except:
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text='發生錯誤！'))
