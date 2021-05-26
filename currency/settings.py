@@ -19,10 +19,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
-# LINE Bot 專案 (currency) -- 圖文表單 (2*1) 外匯查詢 & 北歐貿易網頁連結 -- 2021.0410
+# LINE Bot 專案 (currency_Demo) -- 圖文表單 (2*2) --- 2021.0526
+# (11) & (12) 外匯查詢說明 & 台銀多頁訊息 
+# (21) & (22) 影音多頁訊息 & 程式語言選單 
 SECRET_KEY = 'Uaa63a3f5feff2725536db7d81f09c929'
-LINE_CHANNEL_ACCESS_TOKEN = '17URPk56smrMsWCp7e912oZd81oLt9V54/XzaznpEi/zO5tPpacSIBG9LHVaczBdkg3yr082JtRH9P/jCVwQ1zjONXCtKBAXdZJPcwq7cstYc0fyACaO/0BI2qxkiaQi47L5anTlYck36ie8KK/kXAdB04t89/1O/w1cDnyilFU='
-LINE_CHANNEL_SECRET = '7256e5990761221dad0a1047cb126934'
+LINE_CHANNEL_ACCESS_TOKEN = 'vIPfp34WIi+OlyjVhNMu9EcJxRBHxDz8Yb0bPjA0fVqtVM9DeNhx95GMjm2LdHX+Y71jcNNJ4/MN3LdQ3E93QH2uy494Kf5lxPjLFvSbyIyuHoU6mOM1nKxRD5DpFtxl1y3Jn2phWR5GqhfvLuqCWAdB04t89/1O/w1cDnyilFU='
+LINE_CHANNEL_SECRET = 'ee54a79a7123e18142d9ee12586d9bcb'
+
+# LINE Bot 專案 (currency) -- 圖文表單 (2*1) 外匯查詢 & 北歐貿易網頁連結 -- 2021.0410
+#SECRET_KEY = 'Uaa63a3f5feff2725536db7d81f09c929'
+#LINE_CHANNEL_ACCESS_TOKEN = '17URPk56smrMsWCp7e912oZd81oLt9V54/XzaznpEi/zO5tPpacSIBG9LHVaczBdkg3yr082JtRH9P/jCVwQ1zjONXCtKBAXdZJPcwq7cstYc0fyACaO/0BI2qxkiaQi47L5anTlYck36ie8KK/kXAdB04t89/1O/w1cDnyilFU='
+#LINE_CHANNEL_SECRET = '7256e5990761221dad0a1047cb126934'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
