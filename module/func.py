@@ -41,10 +41,10 @@ def sendTWder_orig(event, mtext):
             else:
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=''))
         else:  #其他未知輸入
-            text =' 無此幣別匯率資料！，請重新輸入！'
+            text =' '
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))            
     except:
-        text = '無法了解你的意思，請重新輸入！'
+        text = ''
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
         
         
@@ -69,10 +69,10 @@ def sendTWder(event, mtext):
             else:
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=''))                
         else:  #其他未知輸入
-            text =' 其他未知資訊！，請重新輸入！'
+            text =' '
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))            
     except:
-        text = '無法了解你的意思，請重新輸入！'
+        text = ''
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))
 
 ################## LIFF　測試網頁　（皆ok,2021.0328） ###################################### 
