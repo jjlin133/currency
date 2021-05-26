@@ -66,7 +66,7 @@ def sendTWder(event, mtext):
                 message = message + '\n 即期賣出 : ' + str(checkSell)
                 line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
             else:
-                line_bot_api.reply_message(event.reply_token, TextSendMessage(text='無此幣別匯率資料！'))                
+                line_bot_api.reply_message(event.reply_token, TextSendMessage(text=''))                
         else:  #其他未知輸入
             text =' 其他未知資訊！，請重新輸入！'
             line_bot_api.reply_message(event.reply_token, TextSendMessage(text=text))            
